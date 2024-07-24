@@ -36,7 +36,13 @@
                     <div class="modal-footer">
                       <button class="btn btn-primary me-auto" data-bs-target="#registroModalToggle2" data-bs-toggle="modal">Aviso Importante</button>
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                      <a href="https://www.registropontoseed.pr.gov.br/sair.php"><button type="button" class="btn btn-primary">Ok</button></a>
+                      <a href="https://www.registropontoseed.pr.gov.br/sair.php" id="linkButton">
+                        <button id="okButton" type="button" class="btn btn-primary">Ok</button>
+                      </a>
+                      <button id="loadingButton" class="btn btn-primary d-none m-0" type="button" disabled>
+                        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                        <span role="status">Ok</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -86,6 +92,7 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
