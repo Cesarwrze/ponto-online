@@ -11,3 +11,15 @@ okButton.addEventListener('click', function(event) {
         window.location.href = linkButton.href;
       }, 1000);
 });
+
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+      if (loadingButton.classList.contains('d-none')) {
+        okButton.classList.remove('d-none');
+      }
+      
+      if (!loadingButton.classList.contains('d-none')) {
+        loadingButton.classList.add('d-none');
+      }
+    }
+});
