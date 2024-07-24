@@ -1,5 +1,10 @@
 const okButton = document.getElementById('okButton');
 const loadingButton = document.getElementById('loadingButton');
+
+function showOkButton() {
+    okButton.classList.remove('d-none');
+    loadingButton.classList.add('d-none');
+}
     
 okButton.addEventListener('click', function(event) {
     event.preventDefault();
@@ -14,9 +19,6 @@ okButton.addEventListener('click', function(event) {
 
 window.addEventListener('pageshow', function(event) {
     if (event.persisted) {
-      if (okButton.classList.contains('d-none')) {
-        loadingButton.classList.add('d-none');
-        okButton.classList.remove('d-none');
-      }
+      showOkButton();
     }
 });
